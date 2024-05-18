@@ -1,3 +1,5 @@
+#Sistema bancário feito utilizando apenas de dados do tipo [List], estruturas de repetição e condicionais.
+
 LIMITE_DE_SAQUES = 0
 SALDO = 0
 valor_deposito = []
@@ -64,7 +66,6 @@ while True:
         depositar = float(input('Quanto gostaria de depositar:'))
         valor_deposito.append(f'R${depositar:.2f}')
 
-        SALDO += depositar
         print(f'O valor de R${depositar:.2f} foi depositado em sua conta corrente.')
         SALDO += depositar
 
