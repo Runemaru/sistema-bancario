@@ -5,8 +5,7 @@
 
 from dataclasses import dataclass #Este é um modulo padrão que visa facilitar o processo de utilização da POO, encurtando as declarações.
 from random import randint
-#############################
-
+############################
 @dataclass #Esta propriedade é um decorador que fará com que o módulo dataclasses funcione.
 # É necessário chamá-lo sempre que você quer criar uma nova classe, caso esteja utilizando o módulo.
 class Cadastro:
