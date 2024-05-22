@@ -1,5 +1,3 @@
-from Cadastro import Cadastro
-
 class Transacao:
     def __init__(self):
         self.saldo = 0
@@ -39,12 +37,3 @@ class Transacao:
     def ver_extrato(self):
         return(f'''EXTRATO: {self.extrato} \n
                 SALDO RESTANTE: R$ {self.saldo}''')
-    
-Rune = Transacao()
-Emilly = Transacao()
-
-Rune.deposito()
-Emilly.deposito()
-Emilly.saque()
-Rune.transferir(Emilly)
-print(Emilly.ver_extrato())

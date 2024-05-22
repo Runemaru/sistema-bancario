@@ -17,17 +17,22 @@ class Cadastro:
                       #E assim fazê-la assumir um determinado valor por uma função.
                       #Por algum motivo mesmo tentando utilizar AGENCIA = 0, a mesma não assumiu o valor da função primeiro_acesso.
                       #Assumindo apenas após ser declarado que receberia um atributo inteiro = 0. Como está escrito em código.
+    
+    def registro_bancario(self):
+         self.nome = input('Digite seu nome:')
+         self.idade = int(input('Digite sua idade:'))
+         self.CPF = input('Digite o seu CPF:')
+         self.AGENCIA = randint(1000,1100)
+         return f'Sua agência é a de número {self.AGENCIA}'
 
-
-    def primeiro_acesso(self):
-        self.AGENCIA = randint(1000,1100)
-        return f'Seja bem-vindo {self.nome}, você foi designado para a agência de número {self.AGENCIA}.'
     
     def validar_CPF(self):
             if len(self.CPF) != 11:
-                print('Quantia de números divergente do necessário. Favor recadastrar.')
+                print('Quantia de números divergente do necessário. Favor recadastrar ou remover pontuações.')
+                return False
 
-            if not self.CPF.isdigit(): #Aqui estamos utilizando uma função de string. Que vê se uma string esta recebendo números.
-                return f'Caractéres invalidos para CPF. Favor recadastrar.' #Para que caso receba algo diferente de números imprima isto.
+            if not self.CPF.isdigit(): 
+                print('Tem caractéres invalidos em seu CPF, favor remover')
+                return False 
             else:
-                 return f'CPF válido.' #E que caso isdigit seja verdadeiro, você retorne este valor. Mostrando que há apenas números.
+                 return True
